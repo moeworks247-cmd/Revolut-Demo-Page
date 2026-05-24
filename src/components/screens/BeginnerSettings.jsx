@@ -7,9 +7,9 @@ import {
   Info,
   MessageCircle,
   Shield,
-  Sparkles,
   Zap,
 } from 'lucide-react'
+import RevaLogo from '../RevaLogo'
 
 function Toggle({ enabled, onChange }) {
   return (
@@ -99,8 +99,8 @@ export default function BeginnerSettings() {
                   className="mt-4 pt-4 border-t border-white/5"
                 >
                   <div className="flex items-center gap-2 text-[13px] text-accent-light">
-                    <Sparkles size={14} />
-                    <span>AI coaching and simplified terms enabled</span>
+                    <RevaLogo size="xs" />
+                    <span>REVA coaching and simplified terms enabled</span>
                   </div>
                 </motion.div>
               )}
@@ -197,7 +197,7 @@ export default function BeginnerSettings() {
                 <div>
                   <p className="text-[13px] font-semibold text-accent-light mb-1">Tooltip Preview</p>
                   <p className="text-[13px] text-white/55 leading-relaxed">
-                    <strong className="text-white/70">P/E Ratio</strong> — Price divided by earnings per share.
+                    <strong className="text-white/70">P/E Ratio</strong>: Price divided by earnings per share.
                     A higher P/E may mean investors expect stronger future growth.
                   </p>
                 </div>

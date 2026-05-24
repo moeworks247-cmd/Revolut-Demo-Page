@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { BookOpen, Clock, Globe, Sparkles, TrendingUp, User } from 'lucide-react'
+import { BookOpen, Clock, Globe, TrendingUp, User } from 'lucide-react'
+import { RevaInsightLabel } from '../shared'
 import { newsFeed } from '../../data/mockData'
 
 const tagConfig = {
@@ -25,7 +26,7 @@ export default function NewsFeed() {
       <motion.div className="flex-1 overflow-y-auto pb-24">
         <div className="px-5 pt-14">
           <div className="mb-6">
-            <p className="text-[13px] text-white/40 font-medium">AI-powered</p>
+            <p className="text-[13px] text-white/40 font-medium">AI powered</p>
             <h1 className="text-[22px] font-bold text-gradient">Market Insights</h1>
           </div>
 
@@ -36,12 +37,7 @@ export default function NewsFeed() {
             className="gradient-border rounded-2xl mb-6 overflow-hidden"
           >
             <div className="relative p-5 bg-gradient-to-br from-accent/12 via-surface-card to-purple-900/10">
-              <div className="flex items-center gap-2 mb-3">
-                <Sparkles size={16} className="text-accent-light" />
-                <span className="text-[11px] font-semibold text-accent-light uppercase tracking-wider">
-                  Featured
-                </span>
-              </div>
+              <RevaInsightLabel label="REVA Featured" className="mb-3" />
               <h2 className="text-[20px] font-bold leading-tight mb-2">{featured.title}</h2>
               <p className="text-[14px] text-white/65 leading-relaxed mb-4">{featured.summary}</p>
               <div className="flex items-center gap-3 text-[12px] text-white/35">

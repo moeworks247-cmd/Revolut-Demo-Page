@@ -1,5 +1,15 @@
 import { motion } from 'framer-motion'
-import { Sparkles } from 'lucide-react'
+import RevaLogo from './RevaLogo'
+import { REVA_BRAND_NAME } from '../constants/revaBrand'
+
+export function RevaInsightLabel({ label = 'REVA Insight', className = '', logoSize = 'sm' }) {
+  return (
+    <div className={`flex items-center gap-2 ${className}`}>
+      <RevaLogo size={logoSize} />
+      <span className="text-[11px] font-semibold text-accent-light uppercase tracking-wider">{label}</span>
+    </div>
+  )
+}
 
 export function AIInsightCard({ insight, compact = false }) {
   return (
@@ -11,13 +21,9 @@ export function AIInsightCard({ insight, compact = false }) {
       <div className="relative p-4 ai-shimmer">
         <motion.div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-purple-500/5" />
         <div className="relative flex gap-3">
-          <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-accent/20 flex items-center justify-center">
-            <Sparkles size={18} className="text-accent-light" />
-          </div>
+          <RevaLogo size="lg" ring />
           <div className="flex-1 min-w-0">
-            <p className="text-[11px] font-semibold text-accent-light uppercase tracking-wider mb-1">
-              AI Insight
-            </p>
+            <RevaInsightLabel label={`${REVA_BRAND_NAME} Insight`} className="mb-1" logoSize="xs" />
             <p className={`text-white/90 leading-relaxed ${compact ? 'text-[13px]' : 'text-sm'}`}>
               {insight}
             </p>
@@ -51,7 +57,7 @@ export function StockRow({ stock, onClick, showTag }) {
         </div>
         <p className="text-[13px] text-white/40 truncate">{stock.name}</p>
       </div>
-      <motion.div className="text-right">
+      <div className="text-right">
         <p className="font-semibold text-[15px] tabular-nums">
           ${stock.price.toFixed(2)}
         </p>
@@ -63,7 +69,7 @@ export function StockRow({ stock, onClick, showTag }) {
           {isPositive ? '+' : ''}
           {stock.changePercent.toFixed(2)}%
         </p>
-      </motion.div>
+      </div>
     </motion.button>
   )
 }

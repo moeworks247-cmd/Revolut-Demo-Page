@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
-import { AlertCircle, CheckCircle2, Heart, Sparkles } from 'lucide-react'
+import { AlertCircle, CheckCircle2, Heart } from 'lucide-react'
 import { Bar, BarChart, Cell, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 import { portfolioHealth } from '../../data/mockData'
-import { ScoreRing, SectionHeader } from '../shared'
+import { ScoreRing, SectionHeader, RevaInsightLabel } from '../shared'
 
 const priorityConfig = {
   high: { icon: AlertCircle, color: 'text-loss', bg: 'bg-loss/10 border-loss/15' },
@@ -98,10 +98,8 @@ export default function PortfolioHealth() {
             <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center">
               <Heart size={20} className="text-accent-light" />
             </div>
-            <p>
-              <span className="text-[13px] text-white/40 font-medium block">Analyze</span>
-              <h1 className="text-[22px] font-bold text-gradient">Portfolio Health</h1>
-            </p>
+            <p className="text-[13px] text-white/40 font-medium block">Financial Fitness</p>
+            <h1 className="text-[22px] font-bold text-gradient">Portfolio Health</h1>
           </div>
 
           <HealthMeter score={healthScore} />
@@ -153,10 +151,7 @@ export default function PortfolioHealth() {
 
           {/* AI Recommendations */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles size={16} className="text-accent-light" />
-              <h2 className="text-[17px] font-semibold">AI Recommendations</h2>
-            </div>
+            <RevaInsightLabel label="REVA Recommendations" className="mb-3" />
             <div className="space-y-3">
               {recommendations.map((rec, i) => {
                 const config = priorityConfig[rec.priority]

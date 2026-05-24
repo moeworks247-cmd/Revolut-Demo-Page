@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Sparkles } from 'lucide-react'
+import RevaLogo from '../RevaLogo'
 import { scrollToId } from '../../hooks/useInView'
 
 const links = [
@@ -12,7 +12,7 @@ const links = [
   { label: 'Impact', id: 'impact' },
 ]
 
-export default function Navbar({ onViewPrototype, onViewArchitecture }) {
+export default function Navbar({ onViewPrototype, onViewArchitecture, onViewHire }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -32,10 +32,8 @@ export default function Navbar({ onViewPrototype, onViewArchitecture }) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between gap-4">
         <button onClick={() => scrollToId('hero')} className="flex items-center gap-2.5 group flex-shrink-0">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-indigo-600 flex items-center justify-center">
-            <Sparkles size={16} className="text-white" />
-          </div>
-          <span className="font-semibold text-[15px] hidden sm:block">AI Trading Copilot</span>
+          <RevaLogo size="lg" />
+          <span className="font-semibold text-[15px] hidden sm:block">REVA</span>
         </button>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -51,6 +49,15 @@ export default function Navbar({ onViewPrototype, onViewArchitecture }) {
         </nav>
 
         <div className="flex items-center gap-2 flex-shrink-0">
+          {onViewHire && (
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={onViewHire}
+              className="hidden md:block px-4 py-2 rounded-full text-[13px] font-semibold text-accent-light glass hover:bg-accent/10 border border-accent/20 transition-colors"
+            >
+              Why Mohamed
+            </motion.button>
+          )}
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={onViewArchitecture}

@@ -29,7 +29,7 @@ const problems = [
     icon: BookOpen,
     title: 'Information Overload',
     stat: '10K+',
-    desc: 'financial data points available daily — overwhelming for beginner investors.',
+    desc: 'financial data points available daily, overwhelming for beginner investors.',
     color: '#8b5cf6',
   },
   {
@@ -57,7 +57,7 @@ export default function ProblemSection() {
           <SectionLabel>The Problem</SectionLabel>
           <SectionTitle className="mb-6">Retail investing wasn't built for understanding.</SectionTitle>
           <SectionSubtitle className="mb-16">
-            Millions of new investors enter markets every year — but platforms optimise for speed, not confidence.
+            Millions of new investors enter markets every year, but platforms optimise for speed, not confidence.
           </SectionSubtitle>
         </Reveal>
 
@@ -91,7 +91,7 @@ export default function ProblemSection() {
             <blockquote className="relative">
               <div className="absolute -left-4 top-0 text-6xl text-accent/20 font-display leading-none">"</div>
               <p className="font-display text-3xl md:text-4xl leading-snug text-white/90 mb-6">
-                Retail trading platforms optimise for execution speed — not investor understanding.
+                Retail trading platforms optimise for execution speed, not investor understanding.
               </p>
               <p className="text-white/40 leading-relaxed">
                 Users can buy a stock in seconds, but receive zero guidance on whether that trade aligns with their goals, risk tolerance, or portfolio health.

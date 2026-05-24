@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Sparkles } from 'lucide-react'
+import RevaLogo from '../RevaLogo'
 
 export default function LoadingScreen({ onComplete }) {
   const [done, setDone] = useState(false)
@@ -31,9 +31,7 @@ export default function LoadingScreen({ onComplete }) {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-indigo-600 flex items-center justify-center glow-blue">
-              <Sparkles size={28} className="text-white" />
-            </div>
+            <RevaLogo size="3xl" ring />
             <motion.div
               className="absolute -inset-4 rounded-3xl border border-accent/20"
               animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0, 0.5] }}
@@ -46,7 +44,15 @@ export default function LoadingScreen({ onComplete }) {
             transition={{ delay: 0.3 }}
             className="mt-8 text-sm font-medium tracking-[0.25em] uppercase text-white/40"
           >
-            AI Trading Copilot
+            REVA
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.45 }}
+            className="mt-2 text-[11px] text-white/25 tracking-wide"
+          >
+            Revolut Enhanced Value Advisor
           </motion.p>
           <motion.div
             className="mt-6 w-32 h-0.5 rounded-full bg-white/5 overflow-hidden"

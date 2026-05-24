@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts'
 import { SectionLabel, SectionTitle, SectionSubtitle, Reveal, GlowOrb } from './shared'
+import RevaLogo from '../RevaLogo'
 import { useInView, useCountUp } from '../../hooks/useInView'
 
 const metrics = [
@@ -79,14 +80,14 @@ export default function KPISection() {
                     contentStyle={{ background: '#12121c', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12 }}
                     labelStyle={{ color: 'rgba(255,255,255,0.5)' }}
                   />
-                  <Line type="monotone" dataKey="informed" stroke="#3b82f6" strokeWidth={2.5} dot={{ fill: '#3b82f6', r: 4 }} name="With AI Copilot" />
+                  <Line type="monotone" dataKey="informed" stroke="#3b82f6" strokeWidth={2.5} dot={{ fill: '#3b82f6', r: 4 }} name="With REVA" />
                   <Line type="monotone" dataKey="baseline" stroke="rgba(255,255,255,0.2)" strokeWidth={2} strokeDasharray="5 5" dot={false} name="Baseline" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
             <div className="flex justify-center gap-8 mt-4">
               <span className="flex items-center gap-2 text-[12px] text-white/40">
-                <span className="w-4 h-0.5 bg-accent rounded" /> With AI Copilot
+                <RevaLogo size="xs" /> With REVA
               </span>
               <span className="flex items-center gap-2 text-[12px] text-white/40">
                 <span className="w-4 h-0.5 bg-white/20 rounded" style={{ borderTop: '2px dashed' }} /> Baseline

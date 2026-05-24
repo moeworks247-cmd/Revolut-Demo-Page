@@ -6,13 +6,12 @@ import {
   Calendar,
   ChevronRight,
   Newspaper,
-  Sparkles,
   TrendingUp,
   Users,
 } from 'lucide-react'
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { stockDetail } from '../../data/mockData'
-import { Pill } from '../shared'
+import { Pill, RevaInsightLabel } from '../shared'
 
 const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload?.length) return null
@@ -135,12 +134,7 @@ export default function StockDetail({ onBack, onBuyClick }) {
             className="gradient-border rounded-2xl mb-6 overflow-hidden"
           >
             <div className="p-4 bg-gradient-to-br from-accent/8 to-transparent">
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles size={16} className="text-accent-light" />
-                <span className="text-[11px] font-semibold text-accent-light uppercase tracking-wider">
-                  AI Summary
-                </span>
-              </div>
+              <RevaInsightLabel label="REVA Summary" className="mb-2" />
               <p className="text-[14px] text-white/85 leading-relaxed">{aiSummary}</p>
             </div>
           </motion.div>

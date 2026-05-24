@@ -69,7 +69,7 @@ export const riskWarning = {
   volatilityWarning: 'This asset experienced 18% weekly volatility after earnings announcements.',
   exposureWarning: 'Adding NVDA would increase your tech sector exposure from 42% to 51%.',
   aiExplanation:
-    'Based on your moderate risk profile and current portfolio concentration, this purchase may increase short-term drawdown risk. Historical patterns show NVDA drops 8–12% within 5 days post-earnings in 3 of the last 4 quarters.',
+    'Based on your moderate risk profile and current portfolio concentration, this purchase may increase short term drawdown risk. Historical patterns show NVDA drops 8–12% within 5 days post earnings in 3 of the last 4 quarters.',
   riskScore: 72,
   confidence: 84,
 }
@@ -100,7 +100,7 @@ export const newsFeed = [
     type: 'macro',
     title: 'AI explains inflation in simple terms',
     summary:
-      'Inflation measures how much prices rise over time. When it cools, the Fed may cut rates — which typically helps stocks. Today\'s CPI came in at 2.4%, below expectations.',
+      'Inflation measures how much prices rise over time. When it cools, the Fed may cut rates, which typically helps stocks. Today\'s CPI came in at 2.4%, below expectations.',
     tag: 'Learn',
     time: 'Today · 11:00 AM',
     readTime: '3 min',

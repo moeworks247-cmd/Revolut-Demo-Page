@@ -10,6 +10,7 @@ import {
   Lock, ScanFace, FileCheck, Globe, UserCog, ClipboardList,
   Cloud, Boxes, Cpu, RadioTower, HardDrive, Network, Container,
 } from 'lucide-react'
+import RevaLogo from '../../RevaLogo'
 import {
   FlowArrow, LayerHeader, ServicePill, OutputBadge, TopLevelFlow,
 } from './diagramParts'
@@ -91,7 +92,7 @@ export default function SystemArchitectureDiagram() {
         viewport={{ once: true }}
         className="glass-strong rounded-2xl p-6 md:p-8 mb-2 gradient-border"
       >
-        <LayerHeader number="02" title="Application Services Layer" subtitle="Low-latency microservices & secure API gateway" />
+        <LayerHeader number="02" title="Application Services Layer" subtitle="Low latency microservices & secure API gateway" />
         <ServiceGrid items={[
           { icon: 'Network', label: 'API Gateway', live: true },
           { icon: 'Key', label: 'Authentication Service' },
@@ -102,8 +103,8 @@ export default function SystemArchitectureDiagram() {
         ]} />
         <motion.div className="flex flex-wrap gap-2 mt-4">
           <ServicePill highlight pulse>&lt;50ms transaction latency</ServicePill>
-          <ServicePill>End-to-end encryption</ServicePill>
-          <ServicePill pulse>Real-time sync</ServicePill>
+          <ServicePill>End to end encryption</ServicePill>
+          <ServicePill pulse>Real time sync</ServicePill>
         </motion.div>
       </motion.div>
 
@@ -116,7 +117,7 @@ export default function SystemArchitectureDiagram() {
         viewport={{ once: true }}
         className="glass-strong rounded-2xl p-6 md:p-8 mb-2 gradient-border"
       >
-        <LayerHeader number="03" title="Market Intelligence Layer" subtitle="Real-time streaming data from global markets" />
+        <LayerHeader number="03" title="Market Intelligence Layer" subtitle="Real time streaming data from global markets" />
         <ServiceGrid items={[
           { icon: 'Radio', label: 'Real-Time Stock Data', live: true },
           { icon: 'Bitcoin', label: 'Crypto Market Feeds', live: true },
@@ -155,11 +156,11 @@ export default function SystemArchitectureDiagram() {
       >
         <div className="absolute inset-0 ai-shimmer opacity-30 pointer-events-none" />
         <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
-          <Brain size={14} className="text-accent-light" />
-          <span className="text-[10px] font-bold uppercase tracking-wider text-accent-light">AI Core</span>
+          <RevaLogo size="xs" />
+          <span className="text-[10px] font-bold uppercase tracking-wider text-accent-light">REVA Core</span>
         </div>
 
-        <LayerHeader number="04" title="AI Trading Copilot Engine" subtitle="Central intelligence hub — real-time insight generation" accent />
+        <LayerHeader number="04" title="REVA Engine" subtitle="Revolut Enhanced Value Advisor · central intelligence hub with real time insight generation" accent />
 
         <div className="relative grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
           {[
@@ -332,7 +333,7 @@ export default function SystemArchitectureDiagram() {
         viewport={{ once: true }}
         className="glass-strong rounded-2xl p-6 md:p-8 mb-2 gradient-border"
       >
-        <LayerHeader number="08" title="Security & Compliance" subtitle="Enterprise-grade trust infrastructure" />
+        <LayerHeader number="08" title="Security & Compliance" subtitle="Enterprise grade trust infrastructure" />
         <ServiceGrid items={[
           { icon: 'Lock', label: 'End-to-End Encryption' },
           { icon: 'Shield', label: 'Fraud Detection', live: true },

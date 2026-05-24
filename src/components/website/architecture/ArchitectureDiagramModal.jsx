@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Layers } from 'lucide-react'
+import { X } from 'lucide-react'
+import RevaLogo from '../../RevaLogo'
 import SystemArchitectureDiagram from './SystemArchitectureDiagram'
 
 export default function ArchitectureDiagramModal({ isOpen, onClose }) {
@@ -46,12 +47,10 @@ export default function ArchitectureDiagramModal({ isOpen, onClose }) {
             className="relative glass-strong border-b border-white/5 px-6 md:px-10 py-4 flex items-center justify-between flex-shrink-0"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/30 to-indigo-600/20 border border-accent/30 flex items-center justify-center">
-                <Layers size={20} className="text-accent-light" />
-              </div>
+              <RevaLogo size="lg" ring />
               <div>
                 <h2 className="font-semibold text-[16px]">System Architecture</h2>
-                <p className="text-[12px] text-white/40">AI Trading Copilot · Enterprise Cloud Diagram</p>
+                <p className="text-[12px] text-white/40">REVA · Enterprise Cloud Diagram</p>
               </div>
             </div>
 
@@ -78,23 +77,27 @@ export default function ArchitectureDiagramModal({ isOpen, onClose }) {
             transition={{ delay: 0.15, duration: 0.5 }}
             className="relative flex-1 overflow-y-auto overflow-x-hidden"
           >
-            <motion.div className="pt-8 pb-4 text-center px-6">
+            <div className="pt-8 pb-4 text-center px-6">
+              <div className="flex justify-center mb-4">
+                <RevaLogo size="2xl" ring />
+              </div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-accent-light mb-3">
                 Technical Architecture
               </p>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-gradient mb-3">
-                AI Trading Copilot
+                REVA
               </h1>
+              <p className="text-[13px] text-accent-light/80 mb-3">Revolut Enhanced Value Advisor</p>
               <p className="text-white/40 max-w-xl mx-auto text-[15px]">
-                Enterprise-grade, AI-native architecture for a modern retail investing platform — designed for scale, trust, and intelligent decision-making.
+                Enterprise grade, AI native architecture for a modern retail investing platform, designed for scale, trust, and intelligent decision making.
               </p>
-            </motion.div>
+            </div>
 
             <SystemArchitectureDiagram />
 
             <div className="max-w-5xl mx-auto px-8 pb-12 text-center">
               <p className="text-[12px] text-white/25">
-                Conceptual architecture · AI Trading Copilot Product Portfolio · 2026
+                Conceptual architecture · REVA Product Portfolio · 2026
               </p>
             </div>
           </motion.div>

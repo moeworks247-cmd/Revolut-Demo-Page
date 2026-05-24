@@ -104,3 +104,11 @@ export function SecondaryButton({ children, onClick, className = '' }) {
     </motion.button>
   )
 }
+
+export function FooterDisclaimer() {
+  return (
+    <p className="text-[11px] md:text-[12px] text-white/30 leading-relaxed text-center max-w-4xl mx-auto">
+      All content on this site is for the sole purpose of review by the hiring team. It does not indicate any partnership or financial incentive between the candidate (Mohamed) and Revolut. Any ideas or inspiration gained from this review may not be used in the development of the authored solution.
+    </p>
+  )
+}

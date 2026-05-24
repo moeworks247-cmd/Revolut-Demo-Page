@@ -22,7 +22,7 @@ export default function ArchitectureSection({ onViewArchitecture }) {
           <SectionLabel>Technical Architecture</SectionLabel>
           <SectionTitle className="mb-6">How the AI works</SectionTitle>
           <SectionSubtitle className="mb-10">
-            A real-time pipeline connecting market intelligence to personalised investor guidance — designed for scale inside a trading platform.
+            A real time pipeline connecting market intelligence to personalised investor guidance, designed for scale inside a trading platform.
           </SectionSubtitle>
         </Reveal>
 
@@ -79,7 +79,7 @@ export default function ArchitectureSection({ onViewArchitecture }) {
                 <ArrowRight size={16} />
               </motion.button>
               <p className="text-[13px] text-white/35 text-center sm:text-left">
-                9-layer enterprise diagram · AI-native · Cloud-first
+                9 layer enterprise diagram · AI native · Cloud first
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function ArchitectureSection({ onViewArchitecture }) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            'Real-time market data ingestion',
+            'Real time market data ingestion',
             'AI-generated trade summaries',
             'Portfolio concentration analysis',
             'Volatility pattern prediction',

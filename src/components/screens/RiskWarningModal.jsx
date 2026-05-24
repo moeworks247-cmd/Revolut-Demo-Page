@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { AlertTriangle, Shield, Sparkles, TrendingDown, X } from 'lucide-react'
+import { AlertTriangle, Shield, TrendingDown, X } from 'lucide-react'
+import { RevaInsightLabel } from '../shared'
 import { riskWarning } from '../../data/mockData'
 
 function RiskMeter({ score, label }) {
@@ -129,12 +130,7 @@ export default function RiskWarningModal({ isOpen, onClose, onContinue }) {
                 className="gradient-border rounded-2xl mb-6 overflow-hidden"
               >
                 <div className="p-4 ai-shimmer">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Sparkles size={16} className="text-accent-light" />
-                    <span className="text-[11px] font-semibold text-accent-light uppercase tracking-wider">
-                      AI Analysis
-                    </span>
-                  </div>
+                  <RevaInsightLabel label="REVA Analysis" className="mb-2" />
                   <p className="text-[14px] text-white/80 leading-relaxed">{aiExplanation}</p>
                 </div>
               </motion.div>

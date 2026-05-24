@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import RevaLogo from './RevaLogo'
+import { REVA_BRAND_NAME } from '../constants/revaBrand'
 
 export default function PhoneFrame({ children, embed = false, scale = 1, label }) {
   const frame = (
@@ -54,9 +56,12 @@ export default function PhoneFrame({ children, embed = false, scale = 1, label }
       </div>
 
       {(label || !embed) && (
-        <p className="text-center mt-5 text-white/30 text-sm font-medium tracking-wide">
-          {label || 'AI Trading Copilot · Prototype'}
-        </p>
+        <div className="flex items-center justify-center gap-2 mt-5">
+          <RevaLogo size="sm" />
+          <p className="text-white/30 text-sm font-medium tracking-wide">
+            {label || `${REVA_BRAND_NAME} · Prototype`}
+          </p>
+        </div>
       )}
     </motion.div>
   )

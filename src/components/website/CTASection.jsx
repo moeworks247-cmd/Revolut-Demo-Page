@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
-import { PrimaryButton, GlowOrb } from './shared'
+import { ArrowRight } from 'lucide-react'
+import { PrimaryButton, SecondaryButton, GlowOrb, FooterDisclaimer } from './shared'
+import RevaLogo from '../RevaLogo'
 import { scrollToId } from '../../hooks/useInView'
 
-export default function CTASection() {
+export default function CTASection({ onViewHire }) {
   return (
     <section id="cta" className="relative section-padding overflow-hidden">
       <GlowOrb className="w-[800px] h-[800px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
@@ -27,7 +28,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-[12px] font-medium text-white/50 mb-8"
         >
-          <Sparkles size={14} className="text-accent-light" />
+          <RevaLogo size="sm" />
           Conceptual Product Portfolio · 2026
         </motion.div>
 
@@ -40,7 +41,7 @@ export default function CTASection() {
         >
           <span className="text-gradient">The Future of Retail Investing</span>
           <br />
-          <span className="text-gradient-blue">Is AI-Assisted.</span>
+          <span className="text-gradient-blue">Starts With REVA.</span>
         </motion.h2>
 
         <motion.p
@@ -50,7 +51,7 @@ export default function CTASection() {
           transition={{ delay: 0.15 }}
           className="text-lg text-white/45 leading-relaxed max-w-2xl mx-auto mb-12"
         >
-          AI Trading Copilot represents the next generation of fintech — where every investor, regardless of experience, has an intelligent partner guiding their financial journey.
+          REVA represents the next generation of fintech, where every investor, regardless of experience, has an intelligent partner guiding their financial journey.
         </motion.p>
 
         <motion.div
@@ -64,26 +65,41 @@ export default function CTASection() {
             View Full Product Case Study
             <ArrowRight size={16} className="inline ml-2 -mt-0.5" />
           </PrimaryButton>
+          {onViewHire && (
+            <SecondaryButton onClick={onViewHire}>
+              Why Hire Mohamed
+            </SecondaryButton>
+          )}
         </motion.div>
       </div>
     </section>
   )
 }
 
-export function Footer() {
+export function Footer({ onViewHire }) {
   return (
     <footer className="border-t border-white/5 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-accent to-indigo-600 flex items-center justify-center">
-            <Sparkles size={14} className="text-white" />
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+          <div className="flex items-center gap-2">
+            <RevaLogo size="md" />
+            <span className="text-sm font-medium text-white/50">REVA</span>
           </div>
-          <span className="text-sm font-medium text-white/50">AI Trading Copilot</span>
+          {onViewHire && (
+            <button
+              type="button"
+              onClick={onViewHire}
+              className="text-[13px] text-accent-light hover:text-accent transition-colors"
+            >
+              Why Hire Mohamed →
+            </button>
+          )}
+          <p className="text-[13px] text-white/25 text-center">
+            Conceptual product portfolio · Not affiliated with Revolut Ltd.
+          </p>
+          <p className="text-[13px] text-white/25">© 2026 · Product Design Portfolio</p>
         </div>
-        <p className="text-[13px] text-white/25 text-center">
-          Conceptual product portfolio · Not affiliated with Revolut Ltd.
-        </p>
-        <p className="text-[13px] text-white/25">© 2026 · Product Design Portfolio</p>
+        <FooterDisclaimer />
       </div>
     </footer>
   )

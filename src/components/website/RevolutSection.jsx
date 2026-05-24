@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
-import { Target, Users, Shield, TrendingUp, Heart, Sparkles } from 'lucide-react'
+import { Target, Users, Shield, TrendingUp, Heart } from 'lucide-react'
+import RevaLogo from '../RevaLogo'
 import { SectionLabel, SectionTitle, SectionSubtitle, Reveal, GlowOrb } from './shared'
 
 const pillars = [
   {
     icon: Target,
     title: 'Product Differentiation',
-    desc: 'AI transforms Revolut Trading from a execution tool into an intelligent investing companion — a moat competitors cannot easily replicate.',
+    desc: 'AI transforms Revolut Trading from an execution tool into an intelligent investing companion, a moat competitors cannot easily replicate.',
   },
   {
     icon: Users,
@@ -16,12 +17,12 @@ const pillars = [
   {
     icon: Shield,
     title: 'Risk Behaviour Reduction',
-    desc: 'Pre-trade warnings and portfolio health scores reduce reckless trading patterns that lead to losses and platform distrust.',
+    desc: 'Pre trade warnings and portfolio health scores reduce reckless trading patterns that lead to losses and platform distrust.',
   },
   {
     icon: Heart,
     title: 'Trust & Confidence',
-    desc: 'Transparent AI explanations build the emotional safety net retail investors need — especially during market volatility.',
+    desc: 'Transparent AI explanations build the emotional safety net retail investors need, especially during market volatility.',
   },
   {
     icon: TrendingUp,
@@ -29,9 +30,9 @@ const pillars = [
     desc: 'Higher engagement with AI features correlates with increased trading frequency, premium tier upgrades, and cross-sell opportunities.',
   },
   {
-    icon: Sparkles,
-    title: 'Long-term Investing',
-    desc: 'Shifts user behaviour from speculative trading toward goal-based, diversified investing — aligning with regulatory best practices.',
+    logo: true,
+    title: 'Long term Investing',
+    desc: 'Shifts user behaviour from speculative trading toward goal based, diversified investing, aligning with regulatory best practices.',
   },
 ]
 
@@ -45,7 +46,7 @@ export default function RevolutSection() {
           <SectionLabel>Strategic Fit</SectionLabel>
           <SectionTitle className="mb-6">Why this matters for Revolut</SectionTitle>
           <SectionSubtitle className="mb-16">
-            AI Trading Copilot isn't a feature — it's a strategic layer that redefines what a trading platform can be.
+            REVA isn't a feature. It's a strategic layer that redefines what a trading platform can be.
           </SectionSubtitle>
         </Reveal>
 
@@ -57,7 +58,7 @@ export default function RevolutSection() {
                 This transforms trading from transactional execution into intelligent financial guidance.
               </p>
               <p className="text-white/45 leading-relaxed text-lg">
-                Revolut has built one of the world's most trusted fintech platforms. AI Trading Copilot is the natural evolution — embedding intelligence at every decision point to protect, educate, and empower millions of retail investors.
+                Revolut has built one of the world's most trusted fintech platforms. REVA is the natural evolution, embedding intelligence at every decision point to protect, educate, and empower millions of retail investors.
               </p>
             </blockquote>
           </div>
@@ -76,7 +77,7 @@ export default function RevolutSection() {
                 className="glass rounded-2xl p-7 hover:border-white/10 transition-all group"
               >
                 <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                  <Icon size={20} className="text-accent-light" />
+                  {p.logo ? <RevaLogo size="md" /> : <Icon size={20} className="text-accent-light" />}
                 </div>
                 <h3 className="text-[17px] font-semibold mb-2">{p.title}</h3>
                 <p className="text-[14px] text-white/45 leading-relaxed">{p.desc}</p>
